@@ -5,7 +5,7 @@ const base64UrlCharacters =
 
 // eslint-disable-next-line
 const tag = Object.getOwnPropertyDescriptor(
-  Object.getPrototypeOf(Uint8Array.prototype)!,
+  Object.getPrototypeOf(Uint8Array.prototype),
   Symbol.toStringTag,
 )!.get!;
 export function checkUint8Array(arg: Uint8Array) {
