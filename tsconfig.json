@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "target": "esnext",
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "suppressExcessPropertyErrors": false,
+    "types": ["vitest/importMeta"]
+  },
+  "include": ["bin", "src", "test", "eslint.config.mts", "vitest.config.ts"],
+  "exclude": ["node_modules"]
+}
