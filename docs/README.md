@@ -38,7 +38,6 @@ Adding and subtracting between Doubloons is only supported with two Doubloons of
 ```typescript
 const x = new Doubloon<USD>(USD, '10.00');
 const y = new Doubloon<USD>(USD, '5.05');
-const y = new Doubloon<USD>(USD, '5.05');
 console.log(x.add(y));
 console.log(x.subtract(y));
 ```
@@ -49,8 +48,8 @@ Multiplying and dividing between Doubloons is forbidden, you can only multiply o
 const x = new Doubloon<USD>(USD, '10.00');
 const y = new Doubloon<USD>(USD, '5.05');
 console.log(x.mul(y)); // not allowed
-console.log(x.mul(5); // OK
-console.log(x.mul(5.15); // Not OK
+console.log(x.mul(5)); // OK
+console.log(x.mul(5.15)); // Not OK
 console.log(x.mul(new Decimal(5.15)); // OK
 ```
 

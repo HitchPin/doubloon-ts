@@ -6,7 +6,7 @@
 
 # Class: CAD
 
-Defined in: Currency.ts:54
+Defined in: Currency.ts:82
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: Currency.ts:54
 
 > **new CAD**(): `CAD`
 
-Defined in: Currency.ts:55
+Defined in: Currency.ts:83
 
 #### Returns
 
@@ -34,7 +34,7 @@ Defined in: Currency.ts:55
 
 > `readonly` **name**: `string`
 
-Defined in: Currency.ts:13
+Defined in: Currency.ts:35
 
 #### Inherited from
 
@@ -48,7 +48,7 @@ Defined in: Currency.ts:13
 
 > **get** **decimalPlaces**(): `number`
 
-Defined in: Currency.ts:20
+Defined in: Currency.ts:42
 
 ##### Returns
 
@@ -60,11 +60,33 @@ Defined in: Currency.ts:20
 
 ## Methods
 
+### format()
+
+> **format**(`value`): `string`
+
+Defined in: Currency.ts:86
+
+#### Parameters
+
+##### value
+
+`Decimal`
+
+#### Returns
+
+`string`
+
+#### Overrides
+
+[`QuantizedCurrency`](QuantizedCurrency.md).[`format`](QuantizedCurrency.md#format)
+
+***
+
 ### quantize()
 
 > **quantize**(`value`): `Decimal`
 
-Defined in: Currency.ts:24
+Defined in: Currency.ts:46
 
 #### Parameters
 
@@ -86,7 +108,7 @@ Defined in: Currency.ts:24
 
 > **toDecimal**(`value`): `Decimal`
 
-Defined in: Currency.ts:27
+Defined in: Currency.ts:49
 
 #### Parameters
 

@@ -4,18 +4,20 @@
 
 [doubloons](../../../../globals.md) / [currencies](../README.md) / QuantizedCurrency
 
-# Class: QuantizedCurrency
+# Class: `abstract` QuantizedCurrency
 
-Defined in: Currency.ts:10
+Defined in: Currency.ts:32
 
 ## Extended by
 
 - [`USD`](USD.md)
 - [`CAD`](CAD.md)
+- [`EUR`](EUR.md)
+- [`CVE`](CVE.md)
 
 ## Implements
 
-- [`Currency`](../../../../interfaces/Currency.md)
+- [`Currency`](../interfaces/Currency.md)
 
 ## Constructors
 
@@ -23,7 +25,7 @@ Defined in: Currency.ts:10
 
 > **new QuantizedCurrency**(`name`, `precision`): `QuantizedCurrency`
 
-Defined in: Currency.ts:15
+Defined in: Currency.ts:37
 
 #### Parameters
 
@@ -45,11 +47,11 @@ Defined in: Currency.ts:15
 
 > `readonly` **name**: `string`
 
-Defined in: Currency.ts:13
+Defined in: Currency.ts:35
 
 #### Implementation of
 
-[`Currency`](../../../../interfaces/Currency.md).[`name`](../../../../interfaces/Currency.md#name)
+[`Currency`](../interfaces/Currency.md).[`name`](../interfaces/Currency.md#name)
 
 ## Accessors
 
@@ -59,7 +61,7 @@ Defined in: Currency.ts:13
 
 > **get** **decimalPlaces**(): `number`
 
-Defined in: Currency.ts:20
+Defined in: Currency.ts:42
 
 ##### Returns
 
@@ -67,15 +69,37 @@ Defined in: Currency.ts:20
 
 #### Implementation of
 
-[`Currency`](../../../../interfaces/Currency.md).[`decimalPlaces`](../../../../interfaces/Currency.md#decimalplaces)
+[`Currency`](../interfaces/Currency.md).[`decimalPlaces`](../interfaces/Currency.md#decimalplaces)
 
 ## Methods
+
+### format()
+
+> `abstract` **format**(`value`): `string`
+
+Defined in: Currency.ts:69
+
+#### Parameters
+
+##### value
+
+`Decimal`
+
+#### Returns
+
+`string`
+
+#### Implementation of
+
+[`Currency`](../interfaces/Currency.md).[`format`](../interfaces/Currency.md#format)
+
+***
 
 ### quantize()
 
 > **quantize**(`value`): `Decimal`
 
-Defined in: Currency.ts:24
+Defined in: Currency.ts:46
 
 #### Parameters
 
@@ -89,7 +113,7 @@ Defined in: Currency.ts:24
 
 #### Implementation of
 
-[`Currency`](../../../../interfaces/Currency.md).[`quantize`](../../../../interfaces/Currency.md#quantize)
+[`Currency`](../interfaces/Currency.md).[`quantize`](../interfaces/Currency.md#quantize)
 
 ***
 
@@ -97,7 +121,7 @@ Defined in: Currency.ts:24
 
 > **toDecimal**(`value`): `Decimal`
 
-Defined in: Currency.ts:27
+Defined in: Currency.ts:49
 
 #### Parameters
 
@@ -111,4 +135,4 @@ Defined in: Currency.ts:27
 
 #### Implementation of
 
-[`Currency`](../../../../interfaces/Currency.md).[`toDecimal`](../../../../interfaces/Currency.md#todecimal)
+[`Currency`](../interfaces/Currency.md).[`toDecimal`](../interfaces/Currency.md#todecimal)

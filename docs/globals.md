@@ -12,6 +12,6 @@
 
 - [Doubloon](classes/Doubloon.md)
 
-## Interfaces
+## Type Aliases
 
-- [Currency](interfaces/Currency.md)
+- [DoubloonToJSON](type-aliases/DoubloonToJSON.md)

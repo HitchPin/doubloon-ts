@@ -9,11 +9,20 @@
 ## Classes
 
 - [CAD](classes/CAD.md)
+- [CVE](classes/CVE.md)
+- [EUR](classes/EUR.md)
 - [QuantizedCurrency](classes/QuantizedCurrency.md)
+- [Registry](classes/Registry.md)
 - [USD](classes/USD.md)
 
-## References
+## Interfaces
 
-### Currency
+- [Currency](interfaces/Currency.md)
 
-Re-exports [Currency](../../../interfaces/Currency.md)
+## Type Aliases
+
+- [CurrencyType](type-aliases/CurrencyType.md)
+
+## Variables
+
+- [registry](variables/registry.md)

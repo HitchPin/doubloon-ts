@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { USD } from '../src/Currency.js';
+import { CAD, registry, USD } from '../src/Currency.js';
 import { Decimal } from 'decimal.js';
 
 describe('Currency', () => {
@@ -13,5 +13,15 @@ describe('Currency', () => {
     expect(new USD().toDecimal(new Decimal('10.00')).toHex()).to.be.eq(
       new Decimal('10.00').toHex(),
     );
+  });
+
+  test('Registry throws on unknown currency', () => {
+    expect(() => registry.byName('HYPE')).toThrow();
+  });
+
+  test('Dollar formats are identical', () => {
+    // I must admit this test only exists to get to 100% coverage
+    // and I needed to cover CAD formatting
+    expect(new USD().format(new Decimal('1.23'))).to.be.eq(new CAD().format(new Decimal('1.23')));
   });
 });

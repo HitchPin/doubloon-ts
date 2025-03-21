@@ -1,12 +1,12 @@
-[**doubloons**](../README.md)
+[**doubloons**](../../../../README.md)
 
 ***
 
-[doubloons](../globals.md) / Currency
+[doubloons](../../../../globals.md) / [currencies](../README.md) / Currency
 
 # Interface: Currency
 
-Defined in: Currency.ts:3
+Defined in: Currency.ts:4
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: Currency.ts:3
 
 > `readonly` **name**: `string`
 
-Defined in: Currency.ts:4
+Defined in: Currency.ts:5
 
 ## Accessors
 
@@ -24,7 +24,7 @@ Defined in: Currency.ts:4
 
 > **get** **decimalPlaces**(): `number`
 
-Defined in: Currency.ts:5
+Defined in: Currency.ts:6
 
 ##### Returns
 
@@ -32,11 +32,29 @@ Defined in: Currency.ts:5
 
 ## Methods
 
+### format()
+
+> **format**(`value`): `string`
+
+Defined in: Currency.ts:9
+
+#### Parameters
+
+##### value
+
+`Decimal`
+
+#### Returns
+
+`string`
+
+***
+
 ### quantize()
 
 > **quantize**(`value`): `Decimal`
 
-Defined in: Currency.ts:7
+Defined in: Currency.ts:8
 
 #### Parameters
 
@@ -54,7 +72,7 @@ Defined in: Currency.ts:7
 
 > **toDecimal**(`value`): `Decimal`
 
-Defined in: Currency.ts:6
+Defined in: Currency.ts:7
 
 #### Parameters
 

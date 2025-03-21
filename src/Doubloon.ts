@@ -1,17 +1,21 @@
 import { Decimal } from 'decimal.js';
-import type { Currency } from './Currency.js';
+import { registry, type Currency, type CurrencyType } from './Currency.js';
+import { uint8ArrayToBase64, base64ToUint8Array } from './b64/polyfill-core.js';
 
-type CurrencyConstructor<T extends Currency> = new () => T;
+export type DoubloonToJSON = {
+  formatted: string;
+  canonical: string;
+};
 
 export class Doubloon<T extends Currency> {
   static readonly #BypassPrecisioinSigil: unique symbol =
     Symbol('BypassPrecision');
-  readonly #currencyCls: CurrencyConstructor<T>;
+  readonly #currencyCls: CurrencyType<T>;
   readonly currency: T;
   readonly #value: Decimal;
 
   constructor(
-    currency: CurrencyConstructor<T>,
+    currency: CurrencyType<T>,
     value: string | Decimal,
     sigil?: symbol,
   ) {
@@ -137,7 +141,44 @@ export class Doubloon<T extends Currency> {
     const currencySigFig = this.currency.quantize(this.#value);
     return currencySigFig.toFixed(this.currency.decimalPlaces).toString();
   }
-  toString() {
+  format(): string {
+    return this.currency.format(this.#value);
+  }
+  toString(): string {
     return `Doubloon<${this.currency.name}>(${this.str()})`;
+  }
+  toJSON(): DoubloonToJSON {
+    const canonical = [this.str(), this.currency.name];
+    const json = JSON.stringify(canonical);
+    const enc = new TextEncoder().encode(json);
+    return {
+      canonical: uint8ArrayToBase64(enc),
+      formatted: this.currency.format(this.#value),
+    };
+  }
+  static parse(json: object | string): Doubloon<Currency> {
+    const decodeFromB64 = (str: string): Doubloon<Currency> => {
+      const { arrayBytes } = base64ToUint8Array(str);
+      const arrStr = new TextDecoder().decode(arrayBytes);
+      const canon = JSON.parse(arrStr) as [string, string];
+      const currency = registry.byName(canon[1]);
+      const dVal = new Decimal(canon[0]);
+      return new Doubloon(currency, dVal);
+    };
+    let jsonObj: object;
+    if (typeof json === 'string') {
+      return decodeFromB64(json);
+    } else {
+      jsonObj = json;
+    }
+    const canonicalDescriptor = Object.getOwnPropertyDescriptor(
+      jsonObj,
+      'canonical',
+    );
+    if (!canonicalDescriptor) {
+      throw new Error("Expected object to have 'canonical' property.");
+    }
+    const canonicalValue = (jsonObj as { canonical: string }).canonical;
+    return decodeFromB64(canonicalValue);
   }
 }

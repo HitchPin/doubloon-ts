@@ -2,11 +2,11 @@
 
 ***
 
-[doubloons](../../../../globals.md) / [currencies](../README.md) / USD
+[doubloons](../../../../globals.md) / [currencies](../README.md) / EUR
 
-# Class: USD
+# Class: EUR
 
-Defined in: Currency.ts:73
+Defined in: Currency.ts:92
 
 ## Extends
 
@@ -14,15 +14,15 @@ Defined in: Currency.ts:73
 
 ## Constructors
 
-### new USD()
+### new EUR()
 
-> **new USD**(): `USD`
+> **new EUR**(): `EUR`
 
-Defined in: Currency.ts:74
+Defined in: Currency.ts:93
 
 #### Returns
 
-`USD`
+`EUR`
 
 #### Overrides
 
@@ -64,7 +64,7 @@ Defined in: Currency.ts:42
 
 > **format**(`value`): `string`
 
-Defined in: Currency.ts:77
+Defined in: Currency.ts:96
 
 #### Parameters
 

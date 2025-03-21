@@ -6,13 +6,13 @@
 
 # Class: Doubloon\<T\>
 
-Defined in: Doubloon.ts:6
+Defined in: Doubloon.ts:10
 
 ## Type Parameters
 
 ### T
 
-`T` *extends* [`Currency`](../interfaces/Currency.md)
+`T` *extends* [`Currency`](../doubloons/namespaces/currencies/interfaces/Currency.md)
 
 ## Constructors
 
@@ -20,13 +20,13 @@ Defined in: Doubloon.ts:6
 
 > **new Doubloon**\<`T`\>(`currency`, `value`, `sigil`?): `Doubloon`\<`T`\>
 
-Defined in: Doubloon.ts:13
+Defined in: Doubloon.ts:17
 
 #### Parameters
 
 ##### currency
 
-`CurrencyConstructor`\<`T`\>
+[`CurrencyType`](../doubloons/namespaces/currencies/type-aliases/CurrencyType.md)\<`T`\>
 
 ##### value
 
@@ -46,7 +46,7 @@ Defined in: Doubloon.ts:13
 
 > `readonly` **currency**: `T`
 
-Defined in: Doubloon.ts:10
+Defined in: Doubloon.ts:14
 
 ## Methods
 
@@ -54,7 +54,7 @@ Defined in: Doubloon.ts:10
 
 > **add**(`value`): `Doubloon`\<`T`\>
 
-Defined in: Doubloon.ts:29
+Defined in: Doubloon.ts:33
 
 #### Parameters
 
@@ -72,7 +72,7 @@ Defined in: Doubloon.ts:29
 
 > **div**(`value`): `Doubloon`\<`T`\>
 
-Defined in: Doubloon.ts:69
+Defined in: Doubloon.ts:73
 
 #### Parameters
 
@@ -90,7 +90,7 @@ Defined in: Doubloon.ts:69
 
 > **eq**(`value`): `boolean`
 
-Defined in: Doubloon.ts:91
+Defined in: Doubloon.ts:95
 
 #### Parameters
 
@@ -104,11 +104,23 @@ Defined in: Doubloon.ts:91
 
 ***
 
+### format()
+
+> **format**(): `string`
+
+Defined in: Doubloon.ts:144
+
+#### Returns
+
+`string`
+
+***
+
 ### gt()
 
 > **gt**(`value`): `boolean`
 
-Defined in: Doubloon.ts:100
+Defined in: Doubloon.ts:104
 
 #### Parameters
 
@@ -126,7 +138,7 @@ Defined in: Doubloon.ts:100
 
 > **gte**(`value`): `boolean`
 
-Defined in: Doubloon.ts:109
+Defined in: Doubloon.ts:113
 
 #### Parameters
 
@@ -144,7 +156,7 @@ Defined in: Doubloon.ts:109
 
 > **lt**(`value`): `boolean`
 
-Defined in: Doubloon.ts:118
+Defined in: Doubloon.ts:122
 
 #### Parameters
 
@@ -162,7 +174,7 @@ Defined in: Doubloon.ts:118
 
 > **lte**(`value`): `boolean`
 
-Defined in: Doubloon.ts:127
+Defined in: Doubloon.ts:131
 
 #### Parameters
 
@@ -180,7 +192,7 @@ Defined in: Doubloon.ts:127
 
 > **mul**(`value`): `Doubloon`\<`T`\>
 
-Defined in: Doubloon.ts:47
+Defined in: Doubloon.ts:51
 
 #### Parameters
 
@@ -198,7 +210,7 @@ Defined in: Doubloon.ts:47
 
 > **str**(): `string`
 
-Defined in: Doubloon.ts:136
+Defined in: Doubloon.ts:140
 
 #### Returns
 
@@ -210,7 +222,7 @@ Defined in: Doubloon.ts:136
 
 > **sub**(`value`): `Doubloon`\<`T`\>
 
-Defined in: Doubloon.ts:38
+Defined in: Doubloon.ts:42
 
 #### Parameters
 
@@ -224,12 +236,42 @@ Defined in: Doubloon.ts:38
 
 ***
 
+### toJSON()
+
+> **toJSON**(): [`DoubloonToJSON`](../type-aliases/DoubloonToJSON.md)
+
+Defined in: Doubloon.ts:150
+
+#### Returns
+
+[`DoubloonToJSON`](../type-aliases/DoubloonToJSON.md)
+
+***
+
 ### toString()
 
 > **toString**(): `string`
 
-Defined in: Doubloon.ts:140
+Defined in: Doubloon.ts:147
 
 #### Returns
 
 `string`
+
+***
+
+### parse()
+
+> `static` **parse**(`json`): `Doubloon`\<[`Currency`](../doubloons/namespaces/currencies/interfaces/Currency.md)\>
+
+Defined in: Doubloon.ts:159
+
+#### Parameters
+
+##### json
+
+`string` | `object`
+
+#### Returns
+
+`Doubloon`\<[`Currency`](../doubloons/namespaces/currencies/interfaces/Currency.md)\>

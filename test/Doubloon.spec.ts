@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'vitest';
 import { Doubloon } from '../src/Doubloon.js';
-import { USD, CAD } from '../src/Currency.js';
+import { USD, CAD, EUR, CVE } from '../src/Currency.js';
 import { Decimal } from 'decimal.js';
 
 describe('Doubloon', () => {
@@ -110,11 +110,44 @@ describe('Doubloon', () => {
     expect(x.toString()).to.be.eq('Doubloon<USD>(2.25)');
   });
 
+  test('format() returns value with currency symbol', () => {
+    const x = new Doubloon<USD>(USD, '2.25');
+    expect(x.format()).to.be.eq('$2.25');
+
+    const y = new Doubloon<EUR>(EUR, '2.25');
+    expect(y.format()).to.be.eq('2.25€');
+
+    const z = new Doubloon<CVE>(CVE, '2.25');
+    expect(z.format()).to.be.eq('2$25');
+  });
+
   test("str rounds by banker's rounding", () => {
     const x = new Doubloon<USD>(USD, '2.25');
     expect(x.div(2).str()).to.be.eq('1.12');
 
     const y = new Doubloon<USD>(USD, '2.27');
     expect(y.div(2).str()).to.be.eq('1.14');
+  });
+
+  test('Serializes to JSON object with canonical value', () => {
+    const x = new Doubloon<USD>(USD, '2.25');
+    expect(x.toJSON()).to.be.eql({
+      canonical: 'WyIyLjI1IiwiVVNEIl0=',
+      formatted: '$2.25',
+    });
+  });
+  test('Parses JSON envelope object', () => {
+    const d = Doubloon.parse({
+      canonical: 'WyIyLjI1IiwiVVNEIl0=',
+      formatted: '$2.25',
+    });
+    expect(d.toString()).to.be.eql('Doubloon<USD>(2.25)')
+  });
+  test('Parses canonicalized string', () => {
+    const d = Doubloon.parse('WyIyLjI1IiwiVVNEIl0=');
+    expect(d.toString()).to.be.eql('Doubloon<USD>(2.25)')
+  });
+  test('Throws on object without canonical', () => {
+    expect(() => Doubloon.parse({ })).to.throw();
   });
 });

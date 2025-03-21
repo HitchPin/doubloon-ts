@@ -2,11 +2,11 @@
 
 ***
 
-[doubloons](../../../../globals.md) / [currencies](../README.md) / USD
+[doubloons](../../../../globals.md) / [currencies](../README.md) / CVE
 
-# Class: USD
+# Class: CVE
 
-Defined in: Currency.ts:73
+Defined in: Currency.ts:102
 
 ## Extends
 
@@ -14,15 +14,15 @@ Defined in: Currency.ts:73
 
 ## Constructors
 
-### new USD()
+### new CVE()
 
-> **new USD**(): `USD`
+> **new CVE**(): `CVE`
 
-Defined in: Currency.ts:74
+Defined in: Currency.ts:103
 
 #### Returns
 
-`USD`
+`CVE`
 
 #### Overrides
 
@@ -64,7 +64,7 @@ Defined in: Currency.ts:42
 
 > **format**(`value`): `string`
 
-Defined in: Currency.ts:77
+Defined in: Currency.ts:106
 
 #### Parameters
 

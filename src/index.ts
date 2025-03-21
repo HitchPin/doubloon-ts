@@ -1,3 +1,2 @@
-export { Doubloon } from './Doubloon.js';
-export { type Currency } from './Currency.js';
+export { Doubloon, type DoubloonToJSON } from './Doubloon.js';
 export * as currencies from './Currency.js';
