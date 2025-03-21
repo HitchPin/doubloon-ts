@@ -34,7 +34,6 @@ Adding and subtracting between Doubloons is only supported with two Doubloons of
 ```typescript
 const x = new Doubloon<USD>(USD, '10.00');
 const y = new Doubloon<USD>(USD, '5.05');
-const y = new Doubloon<USD>(USD, '5.05');
 console.log(x.add(y));
 console.log(x.subtract(y));
 ```
