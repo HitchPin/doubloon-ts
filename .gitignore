@@ -2,3 +2,4 @@ node_modules
 dist
 .tsup
 .DS_Store
+*.tgz

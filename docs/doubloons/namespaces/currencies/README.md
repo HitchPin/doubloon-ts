@@ -1,8 +1,8 @@
-[**doubloon-ts**](../../../README.md)
+[**doubloons**](../../../README.md)
 
 ***
 
-[doubloon-ts](../../../globals.md) / currencies
+[doubloons](../../../globals.md) / currencies
 
 # currencies
 

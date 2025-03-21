@@ -1,4 +1,4 @@
-**doubloon-ts**
+**doubloons**
 
 ***
 
@@ -13,6 +13,10 @@
 <br />
 
 ## How to use?
+
+```typescript
+npm install doubloons
+```
 
 Import types:
 

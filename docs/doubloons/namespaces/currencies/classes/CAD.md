@@ -1,12 +1,12 @@
-[**doubloon-ts**](../../../../README.md)
+[**doubloons**](../../../../README.md)
 
 ***
 
-[doubloon-ts](../../../../globals.md) / [currencies](../README.md) / USD
+[doubloons](../../../../globals.md) / [currencies](../README.md) / CAD
 
-# Class: USD
+# Class: CAD
 
-Defined in: Currency.ts:49
+Defined in: Currency.ts:54
 
 ## Extends
 
@@ -14,15 +14,15 @@ Defined in: Currency.ts:49
 
 ## Constructors
 
-### new USD()
+### new CAD()
 
-> **new USD**(): `USD`
+> **new CAD**(): `CAD`
 
-Defined in: Currency.ts:50
+Defined in: Currency.ts:55
 
 #### Returns
 
-`USD`
+`CAD`
 
 #### Overrides
 

@@ -1,12 +1,12 @@
-[**doubloon-ts**](README.md)
+[**doubloons**](README.md)
 
 ***
 
-# doubloon-ts
+# doubloons
 
 ## Namespaces
 
-- [currencies](doubloon-ts/namespaces/currencies/README.md)
+- [currencies](doubloons/namespaces/currencies/README.md)
 
 ## Classes
 

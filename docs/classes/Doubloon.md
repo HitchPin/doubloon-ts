@@ -1,8 +1,8 @@
-[**doubloon-ts**](../README.md)
+[**doubloons**](../README.md)
 
 ***
 
-[doubloon-ts](../globals.md) / Doubloon
+[doubloons](../globals.md) / Doubloon
 
 # Class: Doubloon\<T\>
 
