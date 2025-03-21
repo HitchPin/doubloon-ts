@@ -54,4 +54,4 @@ Similarly, boolean comparisons require two Doubloons of the same kind.
 
 To get a value out of a Doubloon, you can use .str() to get a string. This will be a properly-quantized decimal number for the given currency, without the currency symbol.
 
-[API Docs](/docs/index.md)
+[API Docs](/docs/globals.md)

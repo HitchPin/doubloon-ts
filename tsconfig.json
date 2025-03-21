@@ -8,8 +8,10 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "suppressExcessPropertyErrors": false,
-    "types": ["vitest/importMeta"]
+    "types": ["vitest/importMeta"],
+    "noEmit": true,
+    "declaration": false
   },
-  "include": ["bin", "src", "test", "eslint.config.mts", "vitest.config.ts"],
-  "exclude": ["node_modules"]
+  "include": ["bin", "src/**/*.ts", "test/**/*.ts", "eslint.config.mts", "vitest.config.ts"],
+  "exclude": ["node_modules", ".tsup"]
 }

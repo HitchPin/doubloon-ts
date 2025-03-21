@@ -29,10 +29,11 @@
     }
   },
   "scripts": {
+    "btsup": "tsup --entry.index src/index.ts --entry.currencies src/Currency.ts --format cjs,esm --dts --clean",
     "build": "tsx bin/build.ts",
     "lint": "pnpm eslint .",
-    "format": "pnpm prettier --write .",
-    "attw": "npx @arethetypeswrong/cli --pack . --profile node16",
+    "format": "pnpm prettier --write ./src",
+    "attw": "npx @arethetypeswrong/cli --pack . --profile node16 --verbose",
     "test": "vitest run --coverage && npx istanbul-badges-readme",
     "test:ui": "vitest --ui",
     "gen-docs": "typedoc"
@@ -60,12 +61,12 @@
     "typescript-eslint": "^8.27.0",
     "vitest": "^3.0.9"
   },
+  "dependencies": {
+    "decimal.js": "^10.5.0"
+  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"
     ]
-  },
-  "peerDependencies": {
-    "decimal.js": "^10.5.0"
   }
 }
