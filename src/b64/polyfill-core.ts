@@ -8,6 +8,10 @@ const tag = Object.getOwnPropertyDescriptor(
   Object.getPrototypeOf(Uint8Array.prototype),
   Symbol.toStringTag,
 )!.get!;
+/**
+ *
+ * @param arg
+ */
 export function checkUint8Array(arg: Uint8Array) {
   let kind;
   try {
@@ -20,6 +24,11 @@ export function checkUint8Array(arg: Uint8Array) {
   }
 }
 
+/**
+ *
+ * @param condition
+ * @param message
+ */
 function assert(condition: boolean, message?: string) {
   if (!condition) {
     throw new Error(`Assert failed: ${message}`);
@@ -32,6 +41,10 @@ interface OptionsObject {
   lastChunkHandling?: string;
 }
 
+/**
+ *
+ * @param options
+ */
 function getOptions(options: unknown): OptionsObject {
   if (typeof options === 'undefined') {
     return Object.create(null) as OptionsObject;
@@ -42,6 +55,11 @@ function getOptions(options: unknown): OptionsObject {
   throw new TypeError('options is not object');
 }
 
+/**
+ *
+ * @param arr
+ * @param options
+ */
 export function uint8ArrayToBase64(arr: Uint8Array, options?: OptionsObject) {
   checkUint8Array(arr);
   const opts = getOptions(options);
@@ -89,6 +107,11 @@ export function uint8ArrayToBase64(arr: Uint8Array, options?: OptionsObject) {
   return result;
 }
 
+/**
+ *
+ * @param chunk
+ * @param throwOnExtraBits
+ */
 function decodeBase64Chunk(chunk: string, throwOnExtraBits: boolean) {
   const actualChunkLength = chunk.length;
   if (actualChunkLength < 4) {
@@ -128,6 +151,11 @@ function decodeBase64Chunk(chunk: string, throwOnExtraBits: boolean) {
   return chunkBytes;
 }
 
+/**
+ *
+ * @param string
+ * @param index
+ */
 function skipAsciiWhitespace(string: string, index: number) {
   for (; index < string.length; ++index) {
     // eslint-disable-next-line
@@ -138,6 +166,13 @@ function skipAsciiWhitespace(string: string, index: number) {
   return index;
 }
 
+/**
+ *
+ * @param string
+ * @param alphabet
+ * @param lastChunkHandling
+ * @param maxLength
+ */
 function fromBase64(
   string: string,
   alphabet: string,
@@ -245,6 +280,12 @@ function fromBase64(
   }
 }
 
+/**
+ *
+ * @param string
+ * @param options
+ * @param into
+ */
 export function base64ToUint8Array(
   string: string,
   options?: object,

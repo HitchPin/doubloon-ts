@@ -3,3 +3,4 @@ dist
 .tsup
 .DS_Store
 *.tgz
+.pnpm-store

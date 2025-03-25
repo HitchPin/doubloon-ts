@@ -3,9 +3,10 @@
 import eslint from '@eslint/js';
 import { globalIgnores } from 'eslint/config';
 import tseslint from 'typescript-eslint';
+import jsdoc from 'eslint-plugin-jsdoc';
 
 export default tseslint.config(
-  globalIgnores(['dist/*','.tsup/*', 'src/b64/polyfill.ts']),
+  globalIgnores(['dist/*','.tsup/*', 'src/b64/polyfill-core.ts']),
   eslint.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
   {
@@ -16,4 +17,14 @@ export default tseslint.config(
       },
     },
   },
+  jsdoc.configs['flat/recommended'],
+  {
+    files: ['**/*.js'],
+    plugins: {
+      jsdoc,
+    },
+    rules: {
+      'jsdoc/require-description': 'warn'
+    }
+  }
 );

@@ -6,7 +6,11 @@
 
 # Interface: Currency
 
-Defined in: Currency.ts:4
+Defined in: [Currency.ts:8](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Currency.ts#L8)
+
+Represents a type of world currency. Different currencies are considered
+different types that are in no way compatible with each other and should
+disallow mathematical operations at the type level and at runtime.
 
 ## Properties
 
@@ -14,7 +18,9 @@ Defined in: Currency.ts:4
 
 > `readonly` **name**: `string`
 
-Defined in: Currency.ts:5
+Defined in: [Currency.ts:10](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Currency.ts#L10)
+
+ISO 4217 Currency Code
 
 ## Accessors
 
@@ -24,7 +30,9 @@ Defined in: Currency.ts:5
 
 > **get** **decimalPlaces**(): `number`
 
-Defined in: Currency.ts:6
+Defined in: [Currency.ts:12](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Currency.ts#L12)
+
+Number of decimal places. Usually 2 (for cents).
 
 ##### Returns
 
@@ -36,7 +44,9 @@ Defined in: Currency.ts:6
 
 > **format**(`value`): `string`
 
-Defined in: Currency.ts:9
+Defined in: [Currency.ts:21](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Currency.ts#L21)
+
+Format with appropriate symbol. For display only.
 
 #### Parameters
 
@@ -54,7 +64,9 @@ Defined in: Currency.ts:9
 
 > **quantize**(`value`): `Decimal`
 
-Defined in: Currency.ts:8
+Defined in: [Currency.ts:19](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Currency.ts#L19)
+
+Quantize to the correct decimal places. Only for internal use.
 
 #### Parameters
 
@@ -72,7 +84,9 @@ Defined in: Currency.ts:8
 
 > **toDecimal**(`value`): `Decimal`
 
-Defined in: Currency.ts:7
+Defined in: [Currency.ts:17](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Currency.ts#L17)
+
+A function that gets a decimal value from a decimal or string.
 
 #### Parameters
 
@@ -83,3 +97,7 @@ Defined in: Currency.ts:7
 #### Returns
 
 `Decimal`
+
+#### Throws
+
+when string or decimal has excessive decimal digits. Round it first!
