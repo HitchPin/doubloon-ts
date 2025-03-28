@@ -6,7 +6,7 @@
 
 # Class: EUR
 
-Defined in: [Currency.ts:138](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Currency.ts#L138)
+Defined in: currency.ts:138
 
 A base currency type that takes care of the most common
 needs of all currencies - properly handling rounding to the
@@ -23,7 +23,7 @@ and formatting.
 
 > **new EUR**(): `EUR`
 
-Defined in: [Currency.ts:139](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Currency.ts#L139)
+Defined in: currency.ts:139
 
 #### Returns
 
@@ -39,7 +39,7 @@ Defined in: [Currency.ts:139](https://github.com/HitchPin/doubloon-ts/blob/91f66
 
 > `readonly` **name**: `string`
 
-Defined in: [Currency.ts:75](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Currency.ts#L75)
+Defined in: currency.ts:75
 
 ISO 4217 Currency Code
 
@@ -55,7 +55,7 @@ ISO 4217 Currency Code
 
 > **get** **decimalPlaces**(): `number`
 
-Defined in: [Currency.ts:83](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Currency.ts#L83)
+Defined in: currency.ts:83
 
 Number of decimal places. Usually 2 (for cents).
 
@@ -73,7 +73,7 @@ Number of decimal places. Usually 2 (for cents).
 
 > **format**(`value`): `string`
 
-Defined in: [Currency.ts:143](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Currency.ts#L143)
+Defined in: currency.ts:143
 
 Format with appropriate symbol. For display only.
 
@@ -97,7 +97,7 @@ Format with appropriate symbol. For display only.
 
 > **quantize**(`value`): `Decimal`
 
-Defined in: [Currency.ts:88](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Currency.ts#L88)
+Defined in: currency.ts:88
 
 Quantize to the correct decimal places. Only for internal use.
 
@@ -121,7 +121,7 @@ Quantize to the correct decimal places. Only for internal use.
 
 > **toDecimal**(`value`): `Decimal`
 
-Defined in: [Currency.ts:92](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Currency.ts#L92)
+Defined in: currency.ts:92
 
 A function that gets a decimal value from a decimal or string.
 

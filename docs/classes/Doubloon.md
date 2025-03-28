@@ -6,7 +6,7 @@
 
 # Class: Doubloon\<T\>
 
-Defined in: [Doubloon.ts:10](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L10)
+Defined in: [Doubloon.ts:10](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L10)
 
 ## Type Parameters
 
@@ -20,7 +20,7 @@ Defined in: [Doubloon.ts:10](https://github.com/HitchPin/doubloon-ts/blob/91f660
 
 > **new Doubloon**\<`T`\>(`currency`, `value`, `sigil`?): `Doubloon`\<`T`\>
 
-Defined in: [Doubloon.ts:23](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L23)
+Defined in: [Doubloon.ts:23](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L23)
 
 Instantiate a monetary value in a given currency.
 
@@ -54,7 +54,7 @@ internal use, it allows for maintaining precision while doing long calculations.
 
 > `readonly` **currency**: `T`
 
-Defined in: [Doubloon.ts:14](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L14)
+Defined in: [Doubloon.ts:14](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L14)
 
 ## Methods
 
@@ -62,7 +62,7 @@ Defined in: [Doubloon.ts:14](https://github.com/HitchPin/doubloon-ts/blob/91f660
 
 > **add**(`value`): `Doubloon`\<`T`\>
 
-Defined in: [Doubloon.ts:44](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L44)
+Defined in: [Doubloon.ts:44](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L44)
 
 Add to another doubloon
 
@@ -86,7 +86,7 @@ a new doubloon with the sum total of this doubloon and the other doubloon
 
 > **div**(`value`): `Doubloon`\<`T`\>
 
-Defined in: [Doubloon.ts:101](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L101)
+Defined in: [Doubloon.ts:101](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L101)
 
 Divide this doubloon by a scalar value.
 
@@ -110,7 +110,7 @@ the divisor
 
 > **eq**(`value`): `boolean`
 
-Defined in: [Doubloon.ts:128](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L128)
+Defined in: [Doubloon.ts:128](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L128)
 
 Check if another doubloon instance is equal to this one.
 
@@ -134,7 +134,7 @@ another doubloon to check equality with
 
 > **format**(): `string`
 
-Defined in: [Doubloon.ts:210](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L210)
+Defined in: [Doubloon.ts:210](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L210)
 
 Produces a formatted string representation of the monetary value that this
 doubloon represents that is useful for display purposes - that is, it includes
@@ -153,7 +153,7 @@ symbols as needed.
 
 > **gt**(`value`): `boolean`
 
-Defined in: [Doubloon.ts:142](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L142)
+Defined in: [Doubloon.ts:142](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L142)
 
 Check if this doubloon has a value greater than another doubloon
 
@@ -177,7 +177,7 @@ if our value exceeds theirs
 
 > **gte**(`value`): `boolean`
 
-Defined in: [Doubloon.ts:156](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L156)
+Defined in: [Doubloon.ts:156](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L156)
 
 Check if this doubloon has a value greater than or equal to another doubloon
 
@@ -201,7 +201,7 @@ true if our value exceeds or matches theirs
 
 > **lt**(`value`): `boolean`
 
-Defined in: [Doubloon.ts:170](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L170)
+Defined in: [Doubloon.ts:170](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L170)
 
 Check if this doubloon has a value less than another doubloon
 
@@ -225,7 +225,7 @@ if our value preceeds theirs
 
 > **lte**(`value`): `boolean`
 
-Defined in: [Doubloon.ts:184](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L184)
+Defined in: [Doubloon.ts:184](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L184)
 
 Check if this doubloon has a value less than or equal to another doubloon
 
@@ -249,7 +249,7 @@ true if our value preceeds or matches theirs
 
 > **mul**(`value`): `Doubloon`\<`T`\>
 
-Defined in: [Doubloon.ts:74](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L74)
+Defined in: [Doubloon.ts:74](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L74)
 
 Multiply this doubloon by a scalar (i.e. non-Doubloon) value.
 For precision reasons, it must either be an integer number,
@@ -275,7 +275,7 @@ a new doubloon with the multiplied value
 
 > **str**(): `string`
 
-Defined in: [Doubloon.ts:199](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L199)
+Defined in: [Doubloon.ts:199](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L199)
 
 Extracts the value out of this doubloon in string form, quantized (i.e. rounded)
 according to the currency's requirements. Note however that no currency symbol is
@@ -293,7 +293,7 @@ a string representation of the value stored in this doubloon
 
 > **sub**(`value`): `Doubloon`\<`T`\>
 
-Defined in: [Doubloon.ts:58](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L58)
+Defined in: [Doubloon.ts:58](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L58)
 
 Subtract from this doubloon
 
@@ -317,7 +317,7 @@ a new doubloon with the subtracted value
 
 > **toJSON**(): [`DoubloonToJSON`](../type-aliases/DoubloonToJSON.md)
 
-Defined in: [Doubloon.ts:226](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L226)
+Defined in: [Doubloon.ts:226](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L226)
 
 Serialize this doubloon into the proper format for transmission over the wire to another
 doubloon-aware service.
@@ -334,7 +334,7 @@ a JSON object that should be treated opaquely
 
 > **toString**(): `string`
 
-Defined in: [Doubloon.ts:218](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L218)
+Defined in: [Doubloon.ts:218](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L218)
 
 Produces a developer-formatted representation of this doubloon instance
 to identify this value in the Chrome dev tools or other debugging environments.
@@ -351,7 +351,7 @@ a developer-oriented string formatting of this doubloon
 
 > `static` **parse**(`json`): `Doubloon`\<[`Currency`](../doubloons/namespaces/currencies/interfaces/Currency.md)\>
 
-Defined in: [Doubloon.ts:240](https://github.com/HitchPin/doubloon-ts/blob/91f6609a5a8923d23e36344e8d52b02c66edfe37/src/Doubloon.ts#L240)
+Defined in: [Doubloon.ts:240](https://github.com/HitchPin/doubloon-ts/blob/78de730b8465a56a31c719d7ffe664d2e118a88e/src/Doubloon.ts#L240)
 
 Parses a JSON serialized doubloon back into a doubloon type of unknown currency.
 

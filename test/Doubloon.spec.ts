@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'vitest';
 import { Doubloon } from '../src/Doubloon.js';
-import { USD, CAD, EUR, CVE } from '../src/Currency.js';
+import { USD, CAD, EUR, CVE } from '../src/currency.js';
 import { Decimal } from 'decimal.js';
 
 describe('Doubloon', () => {

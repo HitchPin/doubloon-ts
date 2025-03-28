@@ -148,7 +148,7 @@ export class EUR extends QuantizedCurrency {
 @registry.register('CVE')
 export class CVE extends QuantizedCurrency {
   constructor() {
-    super('EUR', 2);
+    super('CVE', 2);
   }
   /** @inheritdoc */
   format(value: Decimal): string {

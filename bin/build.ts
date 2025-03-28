@@ -3,7 +3,7 @@ import { build } from 'tsup';
 await build({
   entry: {
     index: 'src/index.ts',
-    currencies: 'src/Currency.ts',
+    currencies: 'src/currency.ts',
   },
   treeshake: true,
   format: ['cjs', 'esm'],

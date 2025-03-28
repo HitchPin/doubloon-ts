@@ -1,5 +1,5 @@
 import { Decimal } from 'decimal.js';
-import { registry, type Currency, type CurrencyType } from './Currency.js';
+import { registry, type Currency, type CurrencyType } from './currency.js';
 import { uint8ArrayToBase64, base64ToUint8Array } from './b64/polyfill-core.js';
 
 export type DoubloonToJSON = {
