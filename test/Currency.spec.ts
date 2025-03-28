@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { CAD, registry, USD } from '../src2/currency.js';
+import { CAD, registry, USD } from '../src/currency.js';
 import { Decimal } from 'decimal.js';
 
 describe('Currency', () => {
