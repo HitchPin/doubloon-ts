@@ -15,6 +15,7 @@ jobs:
           corepack enable
           corepack prepare pnpm@latest-10 --activate
           pnpm install
+          pnpm build
           pnpm lint
           pnpm format:check
           pnpm build
