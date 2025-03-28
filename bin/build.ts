@@ -7,7 +7,7 @@ await build({
   },
   treeshake: true,
   format: ['cjs', 'esm'],
-  bundle: false,
+  bundle: true,
   dts: true,
   experimentalDts: false,
   sourcemap: false,
