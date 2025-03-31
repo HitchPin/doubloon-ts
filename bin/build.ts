@@ -5,6 +5,7 @@ await build({
     index: 'src/index.ts',
     currency: 'src/currency.ts',
   },
+  target: 'es2020',
   treeshake: true,
   format: ['cjs', 'esm'],
   bundle: true,

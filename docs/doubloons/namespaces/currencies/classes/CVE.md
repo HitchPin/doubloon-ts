@@ -6,7 +6,7 @@
 
 # Class: CVE
 
-Defined in: currency.ts:149
+Defined in: [currency.ts:149](https://github.com/HitchPin/doubloon-ts/blob/5c0f29ae5f1feb0c01b6a69dd7c9f1ae85119d16/src/currency.ts#L149)
 
 A base currency type that takes care of the most common
 needs of all currencies - properly handling rounding to the
@@ -23,7 +23,7 @@ and formatting.
 
 > **new CVE**(): `CVE`
 
-Defined in: currency.ts:150
+Defined in: [currency.ts:150](https://github.com/HitchPin/doubloon-ts/blob/5c0f29ae5f1feb0c01b6a69dd7c9f1ae85119d16/src/currency.ts#L150)
 
 #### Returns
 
@@ -39,7 +39,7 @@ Defined in: currency.ts:150
 
 > `readonly` **name**: `string`
 
-Defined in: currency.ts:75
+Defined in: [currency.ts:75](https://github.com/HitchPin/doubloon-ts/blob/5c0f29ae5f1feb0c01b6a69dd7c9f1ae85119d16/src/currency.ts#L75)
 
 ISO 4217 Currency Code
 
@@ -55,7 +55,7 @@ ISO 4217 Currency Code
 
 > **get** **decimalPlaces**(): `number`
 
-Defined in: currency.ts:83
+Defined in: [currency.ts:83](https://github.com/HitchPin/doubloon-ts/blob/5c0f29ae5f1feb0c01b6a69dd7c9f1ae85119d16/src/currency.ts#L83)
 
 Number of decimal places. Usually 2 (for cents).
 
@@ -73,7 +73,7 @@ Number of decimal places. Usually 2 (for cents).
 
 > **format**(`value`): `string`
 
-Defined in: currency.ts:154
+Defined in: [currency.ts:154](https://github.com/HitchPin/doubloon-ts/blob/5c0f29ae5f1feb0c01b6a69dd7c9f1ae85119d16/src/currency.ts#L154)
 
 Format with appropriate symbol. For display only.
 
@@ -97,7 +97,7 @@ Format with appropriate symbol. For display only.
 
 > **quantize**(`value`): `Decimal`
 
-Defined in: currency.ts:88
+Defined in: [currency.ts:88](https://github.com/HitchPin/doubloon-ts/blob/5c0f29ae5f1feb0c01b6a69dd7c9f1ae85119d16/src/currency.ts#L88)
 
 Quantize to the correct decimal places. Only for internal use.
 
@@ -121,7 +121,7 @@ Quantize to the correct decimal places. Only for internal use.
 
 > **toDecimal**(`value`): `Decimal`
 
-Defined in: currency.ts:92
+Defined in: [currency.ts:92](https://github.com/HitchPin/doubloon-ts/blob/5c0f29ae5f1feb0c01b6a69dd7c9f1ae85119d16/src/currency.ts#L92)
 
 A function that gets a decimal value from a decimal or string.
 
