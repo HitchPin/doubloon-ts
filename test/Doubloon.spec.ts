@@ -22,6 +22,15 @@ describe('Doubloon', () => {
     );
   });
 
+  test('Internally creating a doubloon via division allows higher precision', () => {
+    const x = new Doubloon<USD>(USD, new Decimal('1.00'));
+    const xDiv = x.div(3);
+    const xAdd = xDiv.add(new Doubloon<USD>(USD, new Decimal('5.00')));
+    const xSub = xAdd.add(new Doubloon<USD>(USD, new Decimal('5.00')));
+    const xMul = xSub.add(new Doubloon<USD>(USD, new Decimal('5.00')));
+    expect(xMul.str()).toBe('15.33');
+  });
+  
   test('Creating a doubloon with a string requires the correct precision.', () => {
     expect(() => new Doubloon<USD>(USD, '10.000').str()).toThrow();
     expect(() => new Doubloon<USD>(USD, '10.001').str()).toThrow();

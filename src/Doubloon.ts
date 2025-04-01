@@ -48,7 +48,11 @@ export class Doubloon<T extends Currency> {
     ) {
       throw new Error('You can only add a doubloon of the same currency.');
     }
-    return new Doubloon(this.#currencyCls, this.#value.plus(value.#value));
+    return new Doubloon(
+      this.#currencyCls,
+      this.#value.plus(value.#value),
+      Doubloon.#BypassPrecisioinSigil,
+    );
   }
   /**
    * Subtract from this doubloon
@@ -62,7 +66,11 @@ export class Doubloon<T extends Currency> {
     ) {
       throw new Error('You can only subtract a doubloon of the same currency.');
     }
-    return new Doubloon(this.#currencyCls, this.#value.sub(value.#value));
+    return new Doubloon(
+      this.#currencyCls,
+      this.#value.sub(value.#value),
+      Doubloon.#BypassPrecisioinSigil,
+    );
   }
   /**
    * Multiply this doubloon by a scalar (i.e. non-Doubloon) value.
