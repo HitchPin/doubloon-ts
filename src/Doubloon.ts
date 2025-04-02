@@ -198,6 +198,10 @@ export class Doubloon<T extends Currency> {
     }
     return this.#value.lte(value.#value);
   }
+  quantize(roundingMode: Decimal.Rounding): Doubloon<T> {
+    const qts = this.currency.quantize(this.#value, roundingMode);
+    return new Doubloon<T>(this.#currencyCls, qts);
+  }
   /**
    * Extracts the value out of this doubloon in string form, quantized (i.e. rounded)
    * according to the currency's requirements. Note however that no currency symbol is

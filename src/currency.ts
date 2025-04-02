@@ -16,7 +16,7 @@ export interface Currency {
    */
   toDecimal(value: Decimal | string): Decimal;
   /** Quantize to the correct decimal places. Only for internal use. */
-  quantize(value: Decimal): Decimal;
+  quantize(value: Decimal, roundingMode?: Decimal.Rounding): Decimal;
   /** Format with appropriate symbol. For display only. */
   format(value: Decimal): string;
 }
@@ -85,8 +85,11 @@ export abstract class QuantizedCurrency implements Currency {
   }
 
   /** @inheritdoc */
-  quantize(value: Decimal): Decimal {
-    return value.toDecimalPlaces(this.#precision, Decimal.ROUND_HALF_EVEN);
+  quantize(value: Decimal, rounding?: Decimal.Rounding): Decimal {
+    return value.toDecimalPlaces(
+      this.#precision,
+      rounding ?? Decimal.ROUND_HALF_EVEN,
+    );
   }
   /** @inheritdoc */
   toDecimal(value: Decimal | string): Decimal {

@@ -159,4 +159,13 @@ describe('Doubloon', () => {
   test('Throws on object without canonical', () => {
     expect(() => Doubloon.parse({ })).to.throw();
   });
+
+  test('Early quantizing works with custom rounding.', () => {
+    const d = new Doubloon<USD>(USD, new Decimal('2.25'));
+    const dd = d.div(2);
+    const floor = dd.quantize(Decimal.ROUND_FLOOR).str();
+    const ceil = dd.quantize(Decimal.ROUND_CEIL).str();
+    expect(floor).to.be.eq('1.12');
+    expect(ceil).to.be.eq('1.13');
+  })
 });
