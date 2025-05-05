@@ -236,7 +236,7 @@ export class Doubloon<T extends Currency> {
    * @returns {DoubloonToJSON} a JSON object that should be treated opaquely
    */
   toJSON(): DoubloonToJSON {
-    const canonical = [this.str(), this.currency.name];
+    const canonical = [this.currency.name, this.str()];
     const json = JSON.stringify(canonical);
     const enc = new TextEncoder().encode(json);
     return {
@@ -254,8 +254,8 @@ export class Doubloon<T extends Currency> {
       const { arrayBytes } = base64ToUint8Array(str);
       const arrStr = new TextDecoder().decode(arrayBytes);
       const canon = JSON.parse(arrStr) as [string, string];
-      const currency = registry.byName(canon[1]);
-      const dVal = new Decimal(canon[0]);
+      const currency = registry.byName(canon[0]);
+      const dVal = new Decimal(canon[1]);
       return new Doubloon(currency, dVal);
     };
     let jsonObj: object;

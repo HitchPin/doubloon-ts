@@ -141,19 +141,19 @@ describe('Doubloon', () => {
   test('Serializes to JSON object with canonical value', () => {
     const x = new Doubloon<USD>(USD, '2.25');
     expect(x.toJSON()).to.be.eql({
-      canonical: 'WyIyLjI1IiwiVVNEIl0=',
+      canonical: 'WyJVU0QiLCIyLjI1Il0=',
       formatted: '$2.25',
     });
   });
   test('Parses JSON envelope object', () => {
     const d = Doubloon.parse({
-      canonical: 'WyIyLjI1IiwiVVNEIl0=',
+      canonical: "WyJVU0QiLCIyLjI1Il0=",
       formatted: '$2.25',
     });
     expect(d.toString()).to.be.eql('Doubloon<USD>(2.25)')
   });
   test('Parses canonicalized string', () => {
-    const d = Doubloon.parse('WyIyLjI1IiwiVVNEIl0=');
+    const d = Doubloon.parse('WyJVU0QiLCIyLjI1Il0=');
     expect(d.toString()).to.be.eql('Doubloon<USD>(2.25)')
   });
   test('Throws on object without canonical', () => {
@@ -168,4 +168,10 @@ describe('Doubloon', () => {
     expect(floor).to.be.eq('1.12');
     expect(ceil).to.be.eq('1.13');
   })
+
+  test('Cross-deserialization works from .NET sample', () => {
+    const p = Doubloon.parse('WyJVU0QiLCIyLjI1Il0=');
+    expect(p.currency.name).to.be.eq('USD');
+    expect(p.str()).to.be.eq('2.25');
+  });
 });
