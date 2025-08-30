@@ -142,13 +142,13 @@ describe('Doubloon', () => {
     const x = new Doubloon<USD>(USD, '2.25');
     expect(x.toJSON()).to.be.eql({
       canonical: 'WyJVU0QiLCIyLjI1Il0=',
-      formatted: '$2.25',
+      displayOnly: '$2.25',
     });
   });
   test('Parses JSON envelope object', () => {
     const d = Doubloon.parse({
       canonical: "WyJVU0QiLCIyLjI1Il0=",
-      formatted: '$2.25',
+      displayOnly: '$2.25',
     });
     expect(d.toString()).to.be.eql('Doubloon<USD>(2.25)')
   });

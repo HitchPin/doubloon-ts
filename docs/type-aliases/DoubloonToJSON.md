@@ -8,7 +8,7 @@
 
 > **DoubloonToJSON** = `object`
 
-Defined in: [Doubloon.ts:5](https://github.com/HitchPin/doubloon-ts/blob/d49b165a826cc7fe919f1929c5f92a4cf52ed6f4/src/Doubloon.ts#L5)
+Defined in: [Doubloon.ts:5](https://github.com/HitchPin/doubloon-ts/blob/3e0f3b652fb9655c4b1d15030b4525167c3704aa/src/Doubloon.ts#L5)
 
 ## Properties
 
@@ -16,12 +16,12 @@ Defined in: [Doubloon.ts:5](https://github.com/HitchPin/doubloon-ts/blob/d49b165
 
 > **canonical**: `string`
 
-Defined in: [Doubloon.ts:7](https://github.com/HitchPin/doubloon-ts/blob/d49b165a826cc7fe919f1929c5f92a4cf52ed6f4/src/Doubloon.ts#L7)
+Defined in: [Doubloon.ts:7](https://github.com/HitchPin/doubloon-ts/blob/3e0f3b652fb9655c4b1d15030b4525167c3704aa/src/Doubloon.ts#L7)
 
 ***
 
-### formatted
+### displayOnly
 
-> **formatted**: `string`
+> **displayOnly**: `string`
 
-Defined in: [Doubloon.ts:6](https://github.com/HitchPin/doubloon-ts/blob/d49b165a826cc7fe919f1929c5f92a4cf52ed6f4/src/Doubloon.ts#L6)
+Defined in: [Doubloon.ts:6](https://github.com/HitchPin/doubloon-ts/blob/3e0f3b652fb9655c4b1d15030b4525167c3704aa/src/Doubloon.ts#L6)
