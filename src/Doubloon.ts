@@ -3,7 +3,7 @@ import { registry, type Currency, type CurrencyType } from './currency.js';
 import { uint8ArrayToBase64, base64ToUint8Array } from './b64/polyfill-core.js';
 
 export type DoubloonToJSON = {
-  formatted: string;
+  displayOnly: string;
   canonical: string;
 };
 
@@ -241,7 +241,7 @@ export class Doubloon<T extends Currency> {
     const enc = new TextEncoder().encode(json);
     return {
       canonical: uint8ArrayToBase64(enc),
-      formatted: this.currency.format(this.#value),
+      displayOnly: this.currency.format(this.#value),
     };
   }
   /**
