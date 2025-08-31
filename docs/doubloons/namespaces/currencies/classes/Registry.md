@@ -6,7 +6,7 @@
 
 # Class: Registry
 
-Defined in: [currency.ts:34](https://github.com/HitchPin/doubloon-ts/blob/3e0f3b652fb9655c4b1d15030b4525167c3704aa/src/currency.ts#L34)
+Defined in: [currency.ts:34](https://github.com/HitchPin/doubloon-ts/blob/5e314197f83920e68e96475278a29ff25564f17e/src/currency.ts#L34)
 
 For JSON deserialization of unknown currencies, we need a registry
 of all the known currencies. A singleton instance of the registry
@@ -28,7 +28,7 @@ class does the trick.
 
 > **byName**(`name`): [`CurrencyType`](../type-aliases/CurrencyType.md)\<[`Currency`](../interfaces/Currency.md)\>
 
-Defined in: [currency.ts:54](https://github.com/HitchPin/doubloon-ts/blob/3e0f3b652fb9655c4b1d15030b4525167c3704aa/src/currency.ts#L54)
+Defined in: [currency.ts:54](https://github.com/HitchPin/doubloon-ts/blob/5e314197f83920e68e96475278a29ff25564f17e/src/currency.ts#L54)
 
 Lookup a currency type by name.
 
@@ -52,7 +52,7 @@ a generic constructor producing the requested currency.
 
 > **register**(`name`): `ClassDecorator`
 
-Defined in: [currency.ts:42](https://github.com/HitchPin/doubloon-ts/blob/3e0f3b652fb9655c4b1d15030b4525167c3704aa/src/currency.ts#L42)
+Defined in: [currency.ts:42](https://github.com/HitchPin/doubloon-ts/blob/5e314197f83920e68e96475278a29ff25564f17e/src/currency.ts#L42)
 
 Register a currency class for availability in JSON deserialization.
 
