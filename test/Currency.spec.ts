@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { CAD, registry, USD } from '../src/currency.js';
+import { CAD, EUR, registry, USD } from '../src/currency.js';
 import { Decimal } from 'decimal.js';
 
 describe('Currency', () => {
@@ -23,5 +23,11 @@ describe('Currency', () => {
     // I must admit this test only exists to get to 100% coverage
     // and I needed to cover CAD formatting
     expect(new USD().format(new Decimal('1.23'))).to.be.eq(new CAD().format(new Decimal('1.23')));
+  });
+
+  test('intlFormat produces correct output', () => {
+    expect(new USD().intlFormat(new Decimal('1234.56'))).to.be.eq('$1,234.56');
+    expect(new CAD().intlFormat(new Decimal('1234.56'))).to.be.eq('$1,234.56');
+    expect(new EUR().intlFormat(new Decimal('1234.56'))).to.be.eq('€1,234.56');
   });
 });

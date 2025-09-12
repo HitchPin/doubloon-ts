@@ -8,7 +8,7 @@
 
 > **CurrencyType**\<`T`\> = (...`parameters`) => `T`
 
-Defined in: [currency.ts:25](https://github.com/HitchPin/doubloon-ts/blob/5e314197f83920e68e96475278a29ff25564f17e/src/currency.ts#L25)
+Defined in: [currency.ts:27](https://github.com/HitchPin/doubloon-ts/blob/189095028324f1b91553de105a1d18d7e4d63f6f/src/currency.ts#L27)
 
 Represents a constructor that produces a currency instance.
 

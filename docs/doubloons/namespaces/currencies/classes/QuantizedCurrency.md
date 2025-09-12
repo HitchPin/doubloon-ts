@@ -6,7 +6,7 @@
 
 # Class: `abstract` QuantizedCurrency
 
-Defined in: [currency.ts:73](https://github.com/HitchPin/doubloon-ts/blob/5e314197f83920e68e96475278a29ff25564f17e/src/currency.ts#L73)
+Defined in: [currency.ts:75](https://github.com/HitchPin/doubloon-ts/blob/189095028324f1b91553de105a1d18d7e4d63f6f/src/currency.ts#L75)
 
 A base currency type that takes care of the most common
 needs of all currencies - properly handling rounding to the
@@ -18,7 +18,6 @@ and formatting.
 - [`USD`](USD.md)
 - [`CAD`](CAD.md)
 - [`EUR`](EUR.md)
-- [`CVE`](CVE.md)
 
 ## Implements
 
@@ -30,7 +29,7 @@ and formatting.
 
 > **new QuantizedCurrency**(`name`, `precision`): `QuantizedCurrency`
 
-Defined in: [currency.ts:77](https://github.com/HitchPin/doubloon-ts/blob/5e314197f83920e68e96475278a29ff25564f17e/src/currency.ts#L77)
+Defined in: [currency.ts:79](https://github.com/HitchPin/doubloon-ts/blob/189095028324f1b91553de105a1d18d7e4d63f6f/src/currency.ts#L79)
 
 #### Parameters
 
@@ -52,7 +51,7 @@ Defined in: [currency.ts:77](https://github.com/HitchPin/doubloon-ts/blob/5e3141
 
 > `readonly` **name**: `string`
 
-Defined in: [currency.ts:75](https://github.com/HitchPin/doubloon-ts/blob/5e314197f83920e68e96475278a29ff25564f17e/src/currency.ts#L75)
+Defined in: [currency.ts:77](https://github.com/HitchPin/doubloon-ts/blob/189095028324f1b91553de105a1d18d7e4d63f6f/src/currency.ts#L77)
 
 ISO 4217 Currency Code
 
@@ -68,7 +67,7 @@ ISO 4217 Currency Code
 
 > **get** **decimalPlaces**(): `number`
 
-Defined in: [currency.ts:83](https://github.com/HitchPin/doubloon-ts/blob/5e314197f83920e68e96475278a29ff25564f17e/src/currency.ts#L83)
+Defined in: [currency.ts:85](https://github.com/HitchPin/doubloon-ts/blob/189095028324f1b91553de105a1d18d7e4d63f6f/src/currency.ts#L85)
 
 Number of decimal places. Usually 2 (for cents).
 
@@ -86,7 +85,7 @@ Number of decimal places. Usually 2 (for cents).
 
 > `abstract` **format**(`value`): `string`
 
-Defined in: [currency.ts:116](https://github.com/HitchPin/doubloon-ts/blob/5e314197f83920e68e96475278a29ff25564f17e/src/currency.ts#L116)
+Defined in: [currency.ts:118](https://github.com/HitchPin/doubloon-ts/blob/189095028324f1b91553de105a1d18d7e4d63f6f/src/currency.ts#L118)
 
 Format with appropriate symbol. For display only.
 
@@ -106,11 +105,35 @@ Format with appropriate symbol. For display only.
 
 ***
 
+### intlFormat()
+
+> `abstract` **intlFormat**(`value`): `string`
+
+Defined in: [currency.ts:120](https://github.com/HitchPin/doubloon-ts/blob/189095028324f1b91553de105a1d18d7e4d63f6f/src/currency.ts#L120)
+
+Format as an international currency value using the default locale for the currency in use.
+
+#### Parameters
+
+##### value
+
+`Decimal`
+
+#### Returns
+
+`string`
+
+#### Implementation of
+
+[`Currency`](../interfaces/Currency.md).[`intlFormat`](../interfaces/Currency.md#intlformat)
+
+***
+
 ### quantize()
 
 > **quantize**(`value`, `rounding`?): `Decimal`
 
-Defined in: [currency.ts:88](https://github.com/HitchPin/doubloon-ts/blob/5e314197f83920e68e96475278a29ff25564f17e/src/currency.ts#L88)
+Defined in: [currency.ts:90](https://github.com/HitchPin/doubloon-ts/blob/189095028324f1b91553de105a1d18d7e4d63f6f/src/currency.ts#L90)
 
 Quantize to the correct decimal places. Only for internal use.
 
@@ -138,7 +161,7 @@ Quantize to the correct decimal places. Only for internal use.
 
 > **toDecimal**(`value`): `Decimal`
 
-Defined in: [currency.ts:95](https://github.com/HitchPin/doubloon-ts/blob/5e314197f83920e68e96475278a29ff25564f17e/src/currency.ts#L95)
+Defined in: [currency.ts:97](https://github.com/HitchPin/doubloon-ts/blob/189095028324f1b91553de105a1d18d7e4d63f6f/src/currency.ts#L97)
 
 A function that gets a decimal value from a decimal or string.
 

@@ -19,6 +19,8 @@ export interface Currency {
   quantize(value: Decimal, roundingMode?: Decimal.Rounding): Decimal;
   /** Format with appropriate symbol. For display only. */
   format(value: Decimal): string;
+  /** Format as an international currency value using the default locale for the currency in use. */
+  intlFormat(value: Decimal): string;
 }
 
 /** Represents a constructor that produces a currency instance. */
@@ -114,6 +116,8 @@ export abstract class QuantizedCurrency implements Currency {
   }
   /** @inheritdoc */
   abstract format(value: Decimal): string;
+  /** @inheritdoc */
+  abstract intlFormat(value: Decimal): string;
 }
 
 @registry.register('USD')
@@ -125,6 +129,13 @@ export class USD extends QuantizedCurrency {
   format(value: Decimal): string {
     return `$${this.quantize(value).toFixed(2)}`;
   }
+  /** @inheritdoc */
+  intlFormat(value: Decimal): string {
+   return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(value.toNumber());
+  }
 }
 @registry.register('CAD')
 export class CAD extends QuantizedCurrency {
@@ -134,6 +145,13 @@ export class CAD extends QuantizedCurrency {
   /** @inheritdoc */
   format(value: Decimal): string {
     return `$${this.quantize(value).toFixed(2)}`;
+  }
+  /** @inheritdoc */
+  intlFormat(value: Decimal): string {
+   return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(value.toNumber());
   }
 }
 
@@ -146,17 +164,11 @@ export class EUR extends QuantizedCurrency {
   format(value: Decimal): string {
     return `${this.quantize(value).toFixed(2)}€`;
   }
-}
-
-@registry.register('CVE')
-export class CVE extends QuantizedCurrency {
-  constructor() {
-    super('CVE', 2);
-  }
   /** @inheritdoc */
-  format(value: Decimal): string {
-    const amount = this.quantize(value).toFixed(2);
-    const amountParts = amount.split('.');
-    return amountParts[0] + '$' + amountParts[1];
+  intlFormat(value: Decimal): string {
+   return new Intl.NumberFormat('en-BE', {
+      style: 'currency',
+      currency: 'EUR',
+    }).format(value.toNumber());
   }
 }
