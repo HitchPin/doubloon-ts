@@ -223,6 +223,13 @@ export class Doubloon<T extends Currency> {
     return this.currency.format(this.#value);
   }
   /**
+   * Produces the formatted international string representation.
+   * @returns {string} - formatted international string representation.
+   */
+  intlFormat(): string {
+    return this.currency.intlFormat(this.#value);
+  }
+  /**
    * Produces a developer-formatted representation of this doubloon instance
    * to identify this value in the Chrome dev tools or other debugging environments.
    * @returns {string} a developer-oriented string formatting of this doubloon

@@ -127,6 +127,17 @@ describe('Doubloon', () => {
     expect(y.format()).to.be.eq('2.25€');
   });
 
+  test('intlFormat() returns value with currency symbol', () => {
+    const x = new Doubloon<USD>(USD, '2.25');
+    expect(x.intlFormat()).to.be.eq('$2.25');
+
+    const y = new Doubloon<EUR>(EUR, '2.25');
+    expect(y.intlFormat()).to.be.eq('€2.25');
+
+    const z = new Doubloon<USD>(USD, '2121433.25');
+    expect(z.intlFormat()).to.be.eq('$2,121,433.25');
+  });
+
   test("str rounds by banker's rounding", () => {
     const x = new Doubloon<USD>(USD, '2.25');
     expect(x.div(2).str()).to.be.eq('1.12');

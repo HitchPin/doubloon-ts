@@ -8,6 +8,6 @@
 
 > `const` **registry**: [`Registry`](../classes/Registry.md)
 
-Defined in: [currency.ts:67](https://github.com/HitchPin/doubloon-ts/blob/189095028324f1b91553de105a1d18d7e4d63f6f/src/currency.ts#L67)
+Defined in: [currency.ts:67](https://github.com/HitchPin/doubloon-ts/blob/a08a6f3bd7c5f91e0bd31b2fbd311c11214101aa/src/currency.ts#L67)
 
 The singleton registry instance.
