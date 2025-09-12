@@ -131,7 +131,7 @@ export class USD extends QuantizedCurrency {
   }
   /** @inheritdoc */
   intlFormat(value: Decimal): string {
-   return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
     }).format(value.toNumber());
@@ -148,7 +148,7 @@ export class CAD extends QuantizedCurrency {
   }
   /** @inheritdoc */
   intlFormat(value: Decimal): string {
-   return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
     }).format(value.toNumber());
@@ -166,7 +166,7 @@ export class EUR extends QuantizedCurrency {
   }
   /** @inheritdoc */
   intlFormat(value: Decimal): string {
-   return new Intl.NumberFormat('en-BE', {
+    return new Intl.NumberFormat('en-BE', {
       style: 'currency',
       currency: 'EUR',
     }).format(value.toNumber());
