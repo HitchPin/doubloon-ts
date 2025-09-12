@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'vitest';
 import { Doubloon } from '../src/Doubloon.js';
-import { USD, CAD, EUR, CVE } from '../src/currency.js';
+import { USD, CAD, EUR } from '../src/currency.js';
 import { Decimal } from 'decimal.js';
 
 describe('Doubloon', () => {
@@ -125,9 +125,6 @@ describe('Doubloon', () => {
 
     const y = new Doubloon<EUR>(EUR, '2.25');
     expect(y.format()).to.be.eq('2.25€');
-
-    const z = new Doubloon<CVE>(CVE, '2.25');
-    expect(z.format()).to.be.eq('2$25');
   });
 
   test("str rounds by banker's rounding", () => {
@@ -168,6 +165,12 @@ describe('Doubloon', () => {
     expect(floor).to.be.eq('1.12');
     expect(ceil).to.be.eq('1.13');
   })
+
+  test('Cross-deserialization works from .NET sample', () => {
+    const p = Doubloon.parse('WyJVU0QiLCIyLjI1Il0=');
+    expect(p.currency.name).to.be.eq('USD');
+    expect(p.str()).to.be.eq('2.25');
+  });
 
   test('Cross-deserialization works from .NET sample', () => {
     const p = Doubloon.parse('WyJVU0QiLCIyLjI1Il0=');

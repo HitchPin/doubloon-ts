@@ -9,7 +9,6 @@
 ## Classes
 
 - [CAD](classes/CAD.md)
-- [CVE](classes/CVE.md)
 - [EUR](classes/EUR.md)
 - [QuantizedCurrency](classes/QuantizedCurrency.md)
 - [Registry](classes/Registry.md)
